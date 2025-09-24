@@ -1,0 +1,257 @@
+/* --- Basic Setup & Theme --- */
+body {
+    background-color: #121212;
+    color: #E0E0E0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* --- Typography & Links --- */
+h1, h2 {
+    color: #FFFFFF;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 2.5em; text-align: center; }
+h2 { font-size: 1.8em; }
+a { color: #BB86FC; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* --- Header / Bio Section --- */
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+    min-height: 150px; /* Give space for typewriter */
+}
+
+.header h1 { border: none; margin-bottom: 5px; }
+
+/* NEW: Avatar styling */
+.profile-avatar {
+    width: 150px;  /* Adjust size as needed */
+    height: 150px; /* Make height equal to width for perfect circle */
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    border: 3px solid #BB86FC; /* Subtle border matching your theme */
+    margin-bottom: 20px;
+    display: block; /* Centers the image */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.socials {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* --- General Section Styling --- */
+.section {
+    margin-bottom: 40px;
+}
+
+/* --- Notion-style Grid Layout for Projects/Awards --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #1E1E1E;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: #777;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #FFFFFF;
+}
+
+/* --- CSS FOR DYNAMIC EFFECTS --- */
+.typewriter-cursor {
+    border-right: 2px solid #BB86FC;
+    animation: blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- DESIGNS FOR SECTIONS --- */
+/* Animated Skill Bars */
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+}
+
+.skill p {
+    margin: 0 0 5px 0;
+    color: #E0E0E0;
+}
+
+.skill-bar {
+    width: 100%;
+    background-color: #333;
+    border-radius: 4px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.skill-level {
+    background-color: #BB86FC;
+    height: 100%;
+    width: 0;
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+}
+
+.is-visible .skill-level {
+    width: var(--skill-width);
+}
+
+/* Vertical Timeline for Experience & Education */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #444;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 50px;
+}
+
+.timeline-dot {
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #BB86FC;
+    border: 3px solid #121212;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #FFFFFF;
+}
+
+.timeline-content p {
+    margin: 5px 0;
+}
+
+/* NEW STYLES for Multiple Roles */
+.company-header h3 {
+    margin-bottom: 0; /* Reduce space between company and date */
+}
+.company-header p {
+    font-size: 0.9em;
+    font-style: italic;
+    margin-top: 0;
+    color: #aaa;
+}
+
+.role {
+    padding: 15px;
+    margin-top: 15px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+}
+.role:first-of-type {
+    margin-top: 10px;
+}
+
+.role h4 {
+    margin: 0 0 5px 0;
+    color: #E0E0E0;
+    font-size: 1.1em;
+}
+
+.role p {
+    font-size: 0.9em;
+    color: #aaa;
+    margin-top: 0;
+}
+/* END NEW STYLES */
+
+/* Subtle animation for timeline items */
+.timeline-item {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.is-visible .timeline-item {
+    opacity: 1;
+    transform: translateX(0);
+}
+.is-visible .timeline-item:nth-child(2) { transition-delay: 0.2s; }
+.is-visible .timeline-item:nth-child(3) { transition-delay: 0.4s; }
+
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 600px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline::before {
+        left: 8px;
+    }
+    
+    .timeline-item {
+        padding-left: 30px;
+    }
+
+    .timeline-dot {
+        left: 0;
+    }
+}
