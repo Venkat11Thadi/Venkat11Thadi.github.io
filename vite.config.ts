@@ -18,5 +18,9 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/", // Change this to your repository name if deploying to GitHub Pages subfolder
+  base: "/", // Correct for username.github.io user/organization pages
+  build: {
+    outDir: "docs", // Output build to /docs for GitHub Pages
+    emptyOutDir: true,
+  },
 }));
