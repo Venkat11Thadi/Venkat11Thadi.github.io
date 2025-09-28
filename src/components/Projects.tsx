@@ -16,33 +16,30 @@ const Projects = () => {
       featured: true
     },
     {
-      title: "Packet Filtering System",
-      type: "Professional Project",
-      description: "Advanced packet filtering solution for network security at Mobicip. Implemented efficient filtering algorithms and Windows UI components.",
-      technologies: ["C++", "Windows API", "Network Programming", "UI Development"],
-      link: "#",
-      linkText: "Private Repository",
+      title: "IOCP Proxy Server",
+      type: "Project",
+      description: "Implemented efficient proxy service for windows using IOCP and OpenSSL library",
+      technologies: ["C++", "Windows Services", "OpenSSL", "Socket Programming"],
+      link: "https://github.com/Venkat11Thadi/https-proxy-iocp",
+      linkText: "Github Repository",
       icon: <ExternalLink className="h-5 w-5" />,
       featured: true
     },
-    {
-      title: "Data Visualization Dashboard",
-      type: "Internship Project",
-      description: "Interactive dashboard for business intelligence at 1Stop.ai. Created comprehensive data visualizations and ML-powered insights.",
-      technologies: ["Python", "Data Visualization", "Machine Learning", "Business Intelligence"],
-      link: "#",
-      linkText: "View Project",
-      icon: <ExternalLink className="h-5 w-5" />,
-      featured: false
-    }
+    // {
+    //   title: "Data Visualization Dashboard",
+    //   type: "Internship Project",
+    //   description: "Interactive dashboard for business intelligence at 1Stop.ai. Created comprehensive data visualizations and ML-powered insights.",
+    //   technologies: ["Python", "Data Visualization", "Machine Learning", "Business Intelligence"],
+    //   link: "#",
+    //   linkText: "View Project",
+    //   icon: <ExternalLink className="h-5 w-5" />,
+    //   featured: false
+    // }
   ];
 
   const researchAreas = [
     "Machine Learning Algorithms",
-    "Neural Network Optimization", 
-    "Data Science Methodologies",
-    "Network Security Solutions",
-    "Software Performance Analysis"
+    "Data Science",
   ];
 
   return (
