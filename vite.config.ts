@@ -18,9 +18,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/", // Correct for username.github.io user/organization pages
-  build: {
-    outDir: "docs", // Output build to /docs for GitHub Pages
-    emptyOutDir: true,
-  },
+  base: "/",
 }));
