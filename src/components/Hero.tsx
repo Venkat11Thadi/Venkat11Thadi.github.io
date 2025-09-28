@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
+import profilePicture from "@/assets/profile-picture.jpg";
 
 const Hero = () => {
   return (
@@ -8,7 +9,7 @@ const Hero = () => {
         <div className="relative mb-8">
           <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden ring-4 ring-primary/20 animate-float">
             <img 
-              src="/api/placeholder/128/128" 
+              src={profilePicture} 
               alt="Venkata Satya Murty Thadi"
               className="w-full h-full object-cover"
             />
