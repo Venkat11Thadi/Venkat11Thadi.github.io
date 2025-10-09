@@ -18,9 +18,7 @@ const Hero = () => {
         
         <div className="space-y-6 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-            <span className="hero-text">Venkata Satya</span>
-            <br />
-            <span className="hero-text">Murty Thadi</span>
+            <span className="hero-text">Venkat Thadi</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
