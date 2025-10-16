@@ -17,7 +17,7 @@ const Footer = () => {
     },
     {
       name: "Email",
-      href: "mailto:venkat.thadi@example.com",
+      href: "mailto:venkatthadi11@gmail.com",
       icon: <Mail className="h-5 w-5" />
     }
   ];
@@ -117,9 +117,7 @@ const Footer = () => {
             © {currentYear} Venkata Satya Murty Thadi. All rights reserved.
           </p>
           <div className="flex items-center gap-1 text-sm text-muted-foreground">
-            <span>Built with</span>
-            <Heart className="h-4 w-4 text-red-500 fill-current" />
-            <span>using React & TypeScript</span>
+            
           </div>
         </div>
       </div>
